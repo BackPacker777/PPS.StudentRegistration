@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+	AUTHOR: hbates@northmen.org
+	VERSION: 1.0
+	CREATED: 10.15.2015.01
+	PURPOSE: PPS Student Registration Page
+	TODO: 
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PPS Student Registration</title>
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/foundation.min.css" rel="stylesheet">
+		<link href="css/hb.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="row">
+			<div class="small-8 columns">
+				<h3>Public Schools of Petoskey - Student Registration</h3>
+			</div>
+			<div class="small-2 columns">
+				<h3 id="date"></h3>
+			</div>
+			<div class="small-2 columns end">
+				<img src='images/PPS_Logo.png' alt='PPS Logo' id='ppsLogo'>
+			</div>
+		</div>
+		<div class="panel radius">
+			<form id='form' name='form' action="pages/result.html">
+				<div class="row">
+					<fieldset id='dateTime'>
+						<legend>Student Information</legend>
+						<div class="small-3 columns">
+
+						</div>
+					</fieldset>
+				</div>
+				<div class="row">
+					<div class="small-2 columns">
+						<input type='submit' id='completed' value='Completed!' class="button round">
+					</div>
+					<div class="small-2 columns">
+						<input type='reset' id='reset' value='Reset Form' class="button round alert">
+					</div>
+				</div>
+			</form>
+		</div>
+	
+		<!-- SCRIPTS -->
+		<script src="scripts/modernizr.js"></script>
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

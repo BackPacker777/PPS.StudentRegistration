@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+	AUTHOR: HB
+	VERSION: 1.0
+	CREATED: 10.04.2015
+	PURPOSE: NNSP Incident Form Results
+	TODO:
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>NNSP Incident Form</title>
+		<link href="../css/normalize.css" rel="stylesheet">
+		<link href="../css/foundation.min.css" rel="stylesheet">
+		<link href="../css/result.css" rel="stylesheet">
+		<link href="../css/print.css" rel="stylesheet" media="print">
+	</head>
+	<body>
+		<div class="row fullWidth">
+			<h4>Nub's Nob Incident Report</h4>
+			<fieldset id='dateTime'>
+				<legend>Date &amp; Time</legend>
+				<div class="row fullWidth">
+					<div class="small-2 columns">
+						<label class="radius secondary label">Day:</label>
+						<span id="day"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Date:</label>
+						<span id="date"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Incident time:</label>
+						<span id="incidentTime"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='personInfo'>
+				<legend>Injured Person</legend>
+				<div class="row fullWidth">
+					<div class="small-2 columns">
+						<label class="radius secondary label">Last Name:</label>
+						<span id="lastName"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">First Name:</label>
+						<span id="firstName"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Gender:</label>
+						<span id="gender"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">DoB:</label>
+						<span id="dob"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Age:</label>
+						<span id="age"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Height:</label>
+						<span id="height"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Weight:</label>
+						<span id="weight"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Street:</label>
+						<span id="patientStreet"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">City:</label>
+						<span id="patientCity"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">State:</label>
+						<span id="patientState"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Zip:</label>
+						<span id="patientZip"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Email:</label>
+						<span id="email"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Occupation:</label>
+						<span id="occupation"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Home Phone:</label>
+						<span id="homePhoneNum"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Cell Phone:</label>
+						<span id="cellPhoneNum"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='locations'>
+				<legend>Location</legend>
+				<div class="row fullWidth">
+					<div class="small-2 columns">
+						<label class="radius secondary label">Location:</label>
+						<span id="location"></span>
+					</div>
+					<div class="small-2 columns" id="hillLift"></div>
+					<div class="small-3 columns" id="difficultyDiv"></div>
+					<div class="small-4 columns">
+						<label class="radius secondary label">Specific Location:</label>
+						<span id="specificLocation"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='skiHistory'>
+				<legend>Skiing History</legend>
+				<div class="row fullWidth">
+					<div class="small-3 columns">
+						<label class="radius secondary label">Ability:</label>
+						<span id="ability"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">In Lesson?</label>
+						<span id="inLesson"></span>
+					</div>
+					<div class="small-3 columns" id="instYep"></div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Where:</label>
+						<span id="timesWhere"></span>
+					</div>
+					<div class="small-3 columns" id="timesToday"></div>
+					<div class="small-3 columns" id="timesPrior"></div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Equip Removed By:</label>
+						<span id="removedBy"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='patientHistory'>
+				<legend>Patient History</legend>
+				<div class="row fullWidth">
+					<div class="small-3 columns">
+						<label class="radius secondary label">Prior Injury:</label>
+						<span id="priorInjury"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Year Injured:</label>
+						<span id="yearInjured"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Health Insurance?:</label>
+						<span id="hi"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Corrective Lenses?:</label>
+						<span id="correctiveLenses"></span>
+					</div>
+					<div class="small-2 columns" id="glasses"></div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Medications:</label>
+						<span id="meds"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Ticket Type:</label>
+						<span id="ticketType"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Group:</label>
+						<span id="group"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Allergies:</label>
+						<span id="allergies"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='equipment'>
+				<legend>Equipment</legend>
+				<div class="row fullWidth">
+					<div class="small-2 columns">
+						<label class="radius secondary label">Type:</label>
+						<span id="type"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Owner:</label>
+						<span id="owner"></span>
+					</div>
+					<div class="small-3 columns" id="rentalEquipInfo"></div>
+					<div class="small-5 columns" id="rentalInfo"></div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Binding Make:</label>
+						<span id="bindingMake"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Binding Model:</label>
+						<span id="bindingModel"></span>
+					</div>
+					<div class="small-2 columns">
+						<label class="radius secondary label">Helmet Worn:</label>
+						<span id="helmetWorn"></span>
+					</div>
+					<div class="small-2 columns" id="helmetInfo"></div>
+					<div class="small-2 columns" id="helmetRentNum"></div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='incidentDesc'>
+				<legend>Description of Incident</legend>
+				<div class="row fullWidth">
+					<div class="small-12 columns">
+						<span id="incidentDescription"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='injury'>
+				<legend>Probable Injury</legend>
+				<div class="row fullWidth">
+					<div class="small-12 columns">
+						<span id="injuryType"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='injuryLocation'>
+				<legend>Injury Zone</legend>
+				<div class="row fullWidth">
+					<div class="small-12 columns">
+						<span id="injuryZone"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='aidRendered'>
+				<legend>First Aid Rendered</legend>
+				<div class="row fullWidth">
+					<div class="small-6 columns">
+						<label class="radius secondary label">On Hill:</label>
+						<span id="hillFirstAid"></span>
+					</div>
+					<div class="small-6 columns">
+						<label class="radius secondary label">Patrol Room:</label>
+						<span id="patrolRoomAid"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='patrollers'>
+				<legend>Patrollers</legend>
+				<div class="row fullWidth">
+					<div class="small-4 columns">
+						<label class="radius secondary label">Scene Patrollers:</label>
+						<span id="scenePatrollers"></span>
+					</div>
+					<div class="small-4 columns">
+						<label class="radius secondary label">Transporting Patrollers:</label>
+						<span id="transportingPatrollers"></span>
+					</div>
+					<div class="small-4 columns">
+						<label class="radius secondary label">Aid Room Patrollers:</label>
+						<span id="aidPatrollers"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='transport'>
+				<legend>Transportation & Destination</legend>
+				<div class="row fullWidth">
+					<div class="small-3 columns">
+						<label class="radius secondary label">How Arrive Patrol Room:</label>
+						<span id="arrival"></span>
+					</div>
+					<div class="small-1 columns">
+						<span id="arriveOther"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">How Left Patrol Room:</label>
+						<span id="leave"></span>
+					</div>
+					<div class="small-1 columns">
+						<span id="leaveOther"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Destination:</label>
+						<span id="destination"></span>
+					</div>
+					<div class="small-3 columns">
+						<span id="medFacility"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='conditions'>
+				<legend>Site Conditions</legend>
+				<div class="row fullWidth">
+					<div class="small-3 columns">
+						<label class="radius secondary label">Scene Surface:</label>
+						<span id="surfaceConditions"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Visibility:</label>
+						<span id="visibility"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Temperature:</label>
+						<span id="temp"></span>
+					</div>
+					<div class="small-3 columns">
+						<label class="radius secondary label">Wind:</label>
+						<span id="wind"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='witness'>
+				<legend>Witnesses</legend>
+				<div class="row" id="witnesses"></div>
+			</fieldset>
+		</div>
+		<div class="row fullWidth">
+			<fieldset id='completer'>
+				<legend>Report Completer</legend>
+				<div class="row fullWidth">
+					<div class="small-5 columns">
+						<label class="radius secondary label">Report Completer:</label>
+						<span id="reportCompleter"></span>
+					</div>
+					<div class="small-7 columns">
+						<label class="radius secondary label">Date Complete:</label>
+						<span id="dateComplete"></span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+
+		<!-- SCRIPTS -->
+		<script src="../scripts/modernizr.js"></script>
+		<script src="../scripts/result.js"></script>
+	</body>
+</html>
