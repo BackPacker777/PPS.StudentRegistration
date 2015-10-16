@@ -62,7 +62,7 @@ function setDate() {
 }
 
 window.onload = function() {
-     createCityStateData();
+     //createCityStateData();
      //loadCityStates("patient");
      document.getElementById("date").innerText = setDate();
      $(document).load().scrollTop(0); //ensure page starts at top

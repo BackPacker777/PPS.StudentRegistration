@@ -29,7 +29,7 @@
 		<div class="panel radius">
 			<form id='form' name='form' action="pages/result.html">
 				<div class="row">
-					<fieldset id='dateTime'>
+					<fieldset id='studentInfo'>
 						<legend>Student Information</legend>
 						<div class="row">
 							<div class="small-3 columns">
@@ -46,7 +46,7 @@
 							</div>
 							<div class="small-3 columns">
 								<span class="label">Suffix</span><br>
-								<select name='suffix' id='suffix' required>
+								<select name='suffix' id='suffix'>
 									<option>Choose</option>
 									<option value="Jr.">Jr.</option>
 									<option value="Senior">Sr.</option>
@@ -78,10 +78,54 @@
 									<option value="A">Asian</option>
 									<option value="F">Native Hawaiian Pacific Islander</option>
 									<option value="B">Black or African American</option>
-									<option value="W">White</option>
-
+									<option value="O">White</option>
+									<option value="H">Hispanic or Latino</option>
 								</select>
 							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="row">
+					<fieldset id='parentInfo'>
+						<legend>Parent/Guardian Information</legend>
+						<div class="row">
+							<div class="small-2 columns">
+								<span class="label">Lives With</span><br>
+								<select name='livesWith' id='livesWith' required>
+									<option>Choose</option>
+									<option value="Parents">Parents</option>
+									<option value="Mother">Mother Only</option>
+									<option value="Father">Father Only</option>
+									<option value="Mother Stepfather">Mother & Stepfather</option>
+									<option value="Father Stepmother">Father & Stepmother</option>
+									<option value="Guardian">Guardian</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Mother's Name</span><br>
+								<select name='motherTitle' id='motherTitle' required>
+									<option>Choose</option>
+									<option value="Mrs.">Mrs.</option>
+									<option value="Ms.">Ms.</option>
+									<option value="Miss">Miss</option>
+									<option value="Dr.">Dr.</option>
+								</select>
+								</div>
+							<div class="small-2 columns">
+								<br><input name='momLastName' id='momLastName' placeholder='Last Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<br><input name='momFirstName' id='momFirstName' placeholder='First Name' type='text'>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="row">
+					<fieldset id='emergencyInfo'>
+						<legend>Emergency/Medical Information</legend>
+						<div class="row">
+
 						</div>
 					</fieldset>
 				</div>
