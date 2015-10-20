@@ -20,7 +20,7 @@
 				<h3>Public Schools of Petoskey - Student Registration</h3>
 			</div>
 			<div class="small-2 columns">
-				<h3 id="date"></h3>
+				<span id="date"></span>
 			</div>
 			<div class="small-2 columns end">
 				<img src='images/PPS_Logo.png' alt='PPS Logo' id='ppsLogo'>
@@ -83,6 +83,17 @@
 								</select>
 							</div>
 						</div>
+						<div class="row">
+							<div class="small-3 columns">
+								<span class="label">Street</span><br>
+								<input name='street' id='street' placeholder='Street' type='text' required>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Zip</span><br>
+								<input name='zip' id='zip' placeholder='Zip' type='text' required>
+							</div>
+							<div class="small-7 columns"></div>
+						</div>
 					</fieldset>
 				</div>
 				<div class="row">
@@ -102,6 +113,17 @@
 									<option value="Other">Other</option>
 								</select>
 							</div>
+							<div class="small-3 columns">
+								<span class="label">Mother's Employer</span><br>
+								<input name='momEmployer' id='momEmployer' placeholder='Employer' type='text'>
+							</div>
+							<div class="small-3 columns">
+								<span class="label">Father's Employer</span><br>
+								<input name='dadEmployer' id='dadEmployer' placeholder='Employer' type='text'>
+							</div>
+							<div class="small-4 columns"></div>
+						</div>
+						<div class="row">
 							<div class="small-2 columns">
 								<span class="label">Mother's Name</span><br>
 								<select name='motherTitle' id='motherTitle' required>
@@ -111,13 +133,87 @@
 									<option value="Miss">Miss</option>
 									<option value="Dr.">Dr.</option>
 								</select>
-								</div>
+							</div>
 							<div class="small-2 columns">
 								<br><input name='momLastName' id='momLastName' placeholder='Last Name' type='text'>
 							</div>
 							<div class="small-2 columns">
 								<br><input name='momFirstName' id='momFirstName' placeholder='First Name' type='text'>
 							</div>
+							<div class="small-2 columns">
+								<span class="label">Mother Email</span><br>
+								<input name='momEmail' id='momEmail' placeholder='Mother Email' type='email'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Mother Phone</span><br>
+								<input name='momPhone1' id='momPhone1' placeholder='Mother Phone' type='tel'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Phone Type</span><br>
+								<select name='momPhone1Type' id='momPhone1Type' required>
+									<option>Choose</option>
+									<option value="Cell">Cell</option>
+									<option value="Home">Home</option>
+									<option value="Work">Work</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-3 columns">
+								<span class="label">Mother's Street</span><br>
+								<input name='momStreet' id='momStreet' placeholder='Street' type='text' required>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Mother's Zip</span><br>
+								<input name='momZip' id='momZip' placeholder='Zip' type='text' required>
+							</div>
+							<div class="small-7 columns"></div>
+						</div>
+						<div class="row">
+							<div class="small-2 columns">
+								<span class="label">Father's Name</span><br>
+								<select name='aftherTitle' id='fatherTitle' required>
+									<option>Choose</option>
+									<option value="Mr.">Mr.</option>
+									<option value="Dr.">Dr.</option>
+								</select>
+							</div>
+							<div class="small-2 columns">
+								<br><input name='dadLastName' id='dadLastName' placeholder='Last Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<br><input name='dadFirstName' id='dadFirstName' placeholder='First Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Father Email</span><br>
+								<input name='dadEmail' id='dadEmail' placeholder='Father Email' type='email'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Father Phone</span><br>
+								<input name='dadPhone1' id='dadPhone1' placeholder='Father Phone' type='tel'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Phone Type</span><br>
+								<select name='dadPhone1Type' id='dadPhone1Type' required>
+									<option>Choose</option>
+									<option value="Cell">Cell</option>
+									<option value="Home">Home</option>
+									<option value="Work">Work</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-3 columns">
+								<span class="label">Father's Street</span><br>
+								<input name='dadStreet' id='dadStreet' placeholder='Street' type='text' required>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Father's Zip</span><br>
+								<input name='dadZip' id='dadZip' placeholder='Zip' type='text' required>
+							</div>
+							<div class="small-7 columns"></div>
 						</div>
 					</fieldset>
 				</div>
