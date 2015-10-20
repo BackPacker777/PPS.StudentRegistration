@@ -338,6 +338,65 @@
 					</fieldset>
 				</div>
 				<div class="row">
+					<fieldset id='priorSchool'>
+						<legend>Previous Attended School</legend>
+						<div class="row">
+							<div class="small-2 columns">
+								<span class="label">School Name</span><br>
+								<input name='oldSchoolName' id='oldSchoolName' placeholder='School Name' type='text'>
+							</div>
+							<div class="small-3 columns">
+								<span class="label">Street</span><br>
+								<input name='oldSchoolStreet' id='oldSchoolStreet' placeholder='Street Address' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Zip</span><br>
+								<input name='oldSchoolZip' id='oldSchoolZip' placeholder='Zip Code' type='number'>
+							</div>
+							<div class="small-2 columns end">
+								<span class="label">Phone</span><br>
+								<input name='oldSchoolPhone' id='oldSchoolPhone' placeholder='Phone Number' type='tel'>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="row">
+					<fieldset id='siblings'>
+						<legend>Siblings in Petoskey Schools</legend>
+						<div class="row">
+							<div class="small-2 columns">
+								<span class="label">Last Name</span><br>
+								<input name='sibLastName' id='sibLastName' placeholder='Last Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">First Name</span><br>
+								<input name='sibFirstName' id='sibFirstName' placeholder='First Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">DoB</span><br>
+								<input name='sibDob' id='sibDob' type='date'>
+							</div>
+							<div class="small-1 columns">
+								<span class="label">Grade</span><br>
+								<input name='sibGrade' id='sibGrade' placeholder='Grade' type='number'>
+							</div>
+							<div class="small-2 columns end">
+								<span class="label">School</span><br>
+								<select name='sibSchool' id='sibSchool' required>
+									<option>Choose</option>
+									<option value="1">Central</option>
+									<option value="2">Lincoln</option>
+									<option value="3">Ottawa</option>
+									<option value="4">Sheridan</option>
+									<option value="5">Middle School</option>
+									<option value="6">High School</option>
+									<option value="7">Montessori</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="row">
 					<fieldset id='emergencyInfo'>
 						<legend>Emergency/Medical Information</legend>
 						<div class="row">
@@ -356,6 +415,17 @@
 							<div class="small-2 columns end">
 								<span class="label">Dentist Phone</span><br>
 								<input name='dentistPhone' id='dentistPhone' placeholder='Dentist Phone' type='tel'>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-6 columns end">
+								<input type='checkbox' name='takeHospital' id="takeHospital" value='1'><label for="takeHospital">If emergency occurs, please take student to nearest medical facility?</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 columns end">
+								<span class="label">Medications & Special Health Needs</span><br>
+								<textarea id="meds"></textarea>
 							</div>
 						</div>
 						<div class="row">
@@ -390,6 +460,45 @@
 									<option value="Work">Work</option>
 									<option value="Other">Other</option>
 								</select>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="row">
+					<fieldset id='supports'>
+						<legend>Student Previous Services or Supports</legend>
+						<div class="row">
+							<div class="small-12 columns end">
+								<span class="label">Does new student qualify for or receive help in any of the following areas? (Please select all that apply)</span><br>
+								<input type='checkbox' name='specialEd' id="specialEd" value='Special Education'><label for="specialEd">Special Education (IEP on file)</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Traumatic Brain Injury (TBI)</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Behavior Plan</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Gifted/Talented</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Resource Room</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Physically or Health Impaired</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Special Transportation</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Counseling</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Categorical Room</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Austic/Aspergers</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Section 504</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Credit Recovery</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">ADD/ADHD</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Hearing Impared</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Title 1 or Section 31A</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Career Tech</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Speech/Language</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Visually Impared</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Diabetes</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">AP</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Learning Disability</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Emotionally Impared</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Asthma</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Dual Enrollment/Early College</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Cognitively Impared</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Epilepsy</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Tutor/Mentor</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">Attendance</label>
+								<input type='checkbox' name='specialEd' id="" value='Special Education'><label for="specialEd">English Language Learner</label>
 							</div>
 						</div>
 					</fieldset>
