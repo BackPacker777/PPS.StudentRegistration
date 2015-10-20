@@ -91,10 +91,17 @@ function setAddresses() {
      });*/
 }
 
+function setHomeless() {
+     $('#homeless').click(function() {
+          $('#homelessResidence').toggle(this.checked);
+     });
+}
+
 window.onload = function() {
      createCityStateData();
      loadCityStates("student");
      $('#date').text(setDate());
      setAddresses();
+     setHomeless();
      $(document).load().scrollTop(0); //ensure page starts at top
 };
