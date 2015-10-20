@@ -4,7 +4,7 @@
 	VERSION: 1.0
 	CREATED: 10.15.2015.01
 	PURPOSE: PPS Student Registration Page
-	TODO: 
+	TODO:
 -->
 <html lang="en">
 	<head>
@@ -90,9 +90,27 @@
 							</div>
 							<div class="small-2 columns">
 								<span class="label">Zip</span><br>
-								<input name='zip' id='zip' placeholder='Zip' type='text' required>
+								<input name='studentZip' id='studentZip' placeholder='Zip' type='text' required>
 							</div>
-							<div class="small-7 columns"></div>
+							<div class="small-3 columns end">
+								<span class="label">Lives With</span><br>
+								<select name='livesWith' id='livesWith' required>
+									<option value="0">Choose</option>
+									<option value="1">Parents</option>
+									<option value="2">Mother Only</option>
+									<option value="3">Father Only</option>
+									<option value="4">Mother & Stepfather</option>
+									<option value="5">Father & Stepmother</option>
+									<option value="6">Guardian</option>
+									<option value="7">Other</option>
+								</select>
+							</div>
+							<!--<div class="small-7 columns end">
+								<br>
+								<input type='checkbox' name='isNotMomAddress' id="isNotMomAddress" value='1'><label for="isNotMomAddress">NOT Mother's Address</label>
+								<input type='checkbox' name='isNotDadAddress' id="isNotDadAddress" value='1'><label for="isNotDadAddress">NOT Father's Address</label>
+								&lt;!&ndash;<br><input type='checkbox' name='isNotMailingAddress' id="isNotMailingAddress" value='1'><label for="isNotMailingAddress">NOT Mailing Address</label>&ndash;&gt;
+							</div>-->
 						</div>
 					</fieldset>
 				</div>
@@ -100,19 +118,6 @@
 					<fieldset id='parentInfo'>
 						<legend>Parent/Guardian Information</legend>
 						<div class="row">
-							<div class="small-2 columns">
-								<span class="label">Lives With</span><br>
-								<select name='livesWith' id='livesWith' required>
-									<option>Choose</option>
-									<option value="Parents">Parents</option>
-									<option value="Mother">Mother Only</option>
-									<option value="Father">Father Only</option>
-									<option value="Mother Stepfather">Mother & Stepfather</option>
-									<option value="Father Stepmother">Father & Stepmother</option>
-									<option value="Guardian">Guardian</option>
-									<option value="Other">Other</option>
-								</select>
-							</div>
 							<div class="small-3 columns">
 								<span class="label">Mother's Employer</span><br>
 								<input name='momEmployer' id='momEmployer' placeholder='Employer' type='text'>
@@ -159,7 +164,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="momAddress" style="display: none">
 							<div class="small-3 columns">
 								<span class="label">Mother's Street</span><br>
 								<input name='momStreet' id='momStreet' placeholder='Street' type='text' required>
@@ -168,12 +173,15 @@
 								<span class="label">Mother's Zip</span><br>
 								<input name='momZip' id='momZip' placeholder='Zip' type='text' required>
 							</div>
-							<div class="small-7 columns"></div>
+							<div class="small-7 columns end">
+								<br><input type='checkbox' name='momRequiredMailing' id="momRequiredMailing" value='1'><label for="momRequiredMailing">Requires Mailings?</label>
+								<input type='checkbox' name='momEmergencyContact' id="momEmergencyContact" value='1'><label for="momEmergencyContact">Emergency Contact?</label>
+							</div>
 						</div>
 						<div class="row">
 							<div class="small-2 columns">
 								<span class="label">Father's Name</span><br>
-								<select name='aftherTitle' id='fatherTitle' required>
+								<select name='fatherTitle' id='fatherTitle' required>
 									<option>Choose</option>
 									<option value="Mr.">Mr.</option>
 									<option value="Dr.">Dr.</option>
@@ -204,7 +212,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="dadAddress" style="display: none">
 							<div class="small-3 columns">
 								<span class="label">Father's Street</span><br>
 								<input name='dadStreet' id='dadStreet' placeholder='Street' type='text' required>
@@ -213,7 +221,58 @@
 								<span class="label">Father's Zip</span><br>
 								<input name='dadZip' id='dadZip' placeholder='Zip' type='text' required>
 							</div>
-							<div class="small-7 columns"></div>
+							<div class="small-7 columns end">
+								<br><input type='checkbox' name='dadRequiredMailing' id="dadRequiredMailing" value='1'><label for="dadRequiredMailing">Requires Mailings?</label>
+								<input type='checkbox' name='dadEmergencyContact' id="dadEmergencyContact" value='1'><label for="dadEmergencyContact">Emergency Contact?</label>
+							</div>
+						</div>
+						<div class="row" id="guardianInfo" style="display: none">
+							<div class="small-2 columns">
+								<span class="label">Guardian's Name</span><br>
+								<select name='guardianTitle' id='guardianTitle' required>
+									<option>Choose</option>
+									<option value="Mr.">Mr.</option>
+									<option value="Dr.">Dr.</option>
+								</select>
+							</div>
+							<div class="small-2 columns">
+								<br><input name='guardianLastName' id='guardianLastName' placeholder='Last Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<br><input name='guardianFirstName' id='guardianFirstName' placeholder='First Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Guardian Email</span><br>
+								<input name='guardianEmail' id='guardianEmail' placeholder='Guardian Email' type='email'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Guardian Phone</span><br>
+								<input name='guardianPhone1' id='guardianPhone1' placeholder='Guardian Phone' type='tel'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Phone Type</span><br>
+								<select name='guardianPhone1Type' id='guardianPhone1Type' required>
+									<option>Choose</option>
+									<option value="Cell">Cell</option>
+									<option value="Home">Home</option>
+									<option value="Work">Work</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="row" id="guardianAddress" style="display: none">
+							<div class="small-3 columns">
+								<span class="label">Guardian's Street</span><br>
+								<input name='guardianStreet' id='guardianStreet' placeholder='Street' type='text' required>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Guardian's Zip</span><br>
+								<input name='guardianZip' id='guardianZip' placeholder='Zip' type='text' required>
+							</div>
+							<div class="small-7 columns end">
+								<br><input type='checkbox' name='guardianRequiredMailing' id="guardianRequiredMailing" value='1'><label for="guardianRequiredMailing">Requires Mailings?</label>
+								<input type='checkbox' name='guardianEmergencyContact' id="guardianEmergencyContact" value='1'><label for="guardianEmergencyContact">Emergency Contact?</label>
+							</div>
 						</div>
 					</fieldset>
 				</div>
@@ -221,7 +280,56 @@
 					<fieldset id='emergencyInfo'>
 						<legend>Emergency/Medical Information</legend>
 						<div class="row">
-
+							<div class="small-3 columns">
+								<span class="label">Doctor</span><br>
+								<input name='doctor' id='doctor' placeholder='Doctor Name' type='text'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Doctor Phone</span><br>
+								<input name='doctorPhone' id='doctorPhone' placeholder='Doctor Phone' type='tel'>
+							</div>
+							<div class="small-3 columns">
+								<span class="label">Dentist</span><br>
+								<input name='dentist' id='dentist' placeholder='Dentist Name' type='text'>
+							</div>
+							<div class="small-2 columns end">
+								<span class="label">Dentist Phone</span><br>
+								<input name='dentistPhone' id='dentistPhone' placeholder='Dentist Phone' type='tel'>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-2 columns">
+								<span class="label">Contact Name</span><br>
+								<select name='1ContactTitle' id='1ContactTitle' required>
+									<option>Choose</option>
+									<option value="Mr.">Mr.</option>
+									<option value="Dr.">Dr.</option>
+								</select>
+							</div>
+							<div class="small-2 columns">
+								<br><input name='1ContactLastName' id='1ContactLastName' placeholder='Last Name' type='text' required>
+							</div>
+							<div class="small-2 columns">
+								<br><input name='1ContactFirstName' id='1ContactFirstName' placeholder='First Name' type='text' required>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Contact Email</span><br>
+								<input name='1ContactEmail' id='1ContactEmail' placeholder='Contact Email' type='email'>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Contact Phone</span><br>
+								<input name='1ContactPhone1' id='1ContactPhone1' placeholder='Contact Phone' type='tel' required>
+							</div>
+							<div class="small-2 columns">
+								<span class="label">Phone Type</span><br>
+								<select name='1ContactPhone1Type' id='1ContactPhone1Type' required>
+									<option>Choose</option>
+									<option value="Cell">Cell</option>
+									<option value="Home">Home</option>
+									<option value="Work">Work</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
 						</div>
 					</fieldset>
 				</div>
@@ -235,7 +343,7 @@
 				</div>
 			</form>
 		</div>
-	
+
 		<!-- SCRIPTS -->
 		<script src="scripts/modernizr.js"></script>
 		<script src="scripts/jquery.js"></script>
